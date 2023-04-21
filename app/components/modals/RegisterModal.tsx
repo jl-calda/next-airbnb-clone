@@ -49,7 +49,9 @@ const RegisterModal = () => {
         password: data.password,
       })
       .then(() => {
+        toast.success("Registered successfully");
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("Something went wrong");
